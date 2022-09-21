@@ -1,0 +1,74 @@
+:host {
+  font-family: "Poppins", sans-serif;
+  width: 100%;
+  height: 100%;
+}
+
+.app-box {
+  width: 100%;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.component-nav {
+  background-color: rgb(63, 61, 61);
+  color: rgb(243, 235, 235);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  overflow: hidden;
+}
+.component-nav__image {
+  margin-left: -20px;
+  width: 100px;
+  height: 50px;
+  background-image: url("../assets/yanosik-logo-mobile.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.content {
+  font-family: "Poppins", sans-serif;
+  width: 100%;
+  padding: 20px;
+  background-color: rgb(63, 61, 61);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.login-btn {
+  font-family: "Poppins", sans-serif;
+}
+
+@media (min-width: 500px) {
+  .component-nav {
+    width: 500px;
+  }
+  .component-nav__image {
+    margin-left: 0;
+    width: 180px;
+    height: 70px;
+    background-image: url("../assets/yanosik-logo-desktop.png");
+  }
+  .content {
+    width: 500px;
+  }
+}/*# sourceMappingURL=app.component.css.map */

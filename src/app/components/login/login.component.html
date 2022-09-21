@@ -1,0 +1,21 @@
+<div class="login-contener">
+    <h1 class="login-contener__title">Logowanie</h1>
+    <form [formGroup]="loginForm" class="login-contener__form" (ngSubmit)="submit()">
+        <mat-form-field>
+            <input matInput placeholder="Adres Email" formControlName="email">
+            <mat-error *ngIf="email?.errors?.['required']">Email jest pusty</mat-error>
+            <mat-error *ngIf="email?.errors?.['email']">Email jest błędny</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Hasło" formControlName="password">
+            <mat-error *ngIf="loginForm.controls['password'].hasError('required')">Puste hasło</mat-error>
+            <mat-error *ngIf="loginForm.controls['password'].hasError('minlength')">Hasło musi mieć min 6 zanków
+            </mat-error>
+        </mat-form-field>
+        <div class="login-contener__form-text"><button mat-raised-button class="login-contener__form-text-button"
+                type="submit">Zaloguj się</button>
+            <span class="login-contener__form-text-info">Nowy na stronie ? <a routerLink="/sing-up">Zarejestuj się
+                </a></span>
+        </div>
+    </form>
+</div>

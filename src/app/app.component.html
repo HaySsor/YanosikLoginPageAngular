@@ -1,3 +1,14 @@
-<div>
+<div class="app-box">
+<mat-toolbar class="component-nav">
+  <div class="component-nav__image"></div>
+  <button mat-button routerLink="login" class="login-btn">
+    <mat-icon>login</mat-icon>
+    Zaloguj się
+  </button>
+
+</mat-toolbar>
+
+<div class="content mat-elevation-z5">
   <router-outlet></router-outlet>
+</div>
 </div>

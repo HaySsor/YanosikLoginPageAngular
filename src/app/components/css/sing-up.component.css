@@ -1,0 +1,100 @@
+:host {
+  width: 100%;
+  padding: 10px;
+}
+
+.sing-contener {
+  font-family: "Poppins", sans-serif;
+}
+.sing-contener__title {
+  font-family: "Poppins", sans-serif;
+  color: white;
+  padding: 0 30px;
+}
+.sing-contener__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0 5px;
+}
+.sing-contener__form input {
+  color: white;
+}
+.sing-contener__form-text {
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+.sing-contener__form-text-button {
+  background-color: red;
+  width: 100%;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  padding: 5px;
+  font-size: 16px;
+}
+.sing-contener mat-checkbox {
+  margin: 10px;
+  padding: 2px;
+}
+
+.error {
+  color: tomato;
+}
+
+.check {
+  color: white;
+}
+
+@media (min-width: 500px) {
+  .sing-contener {
+    font-family: "Poppins", sans-serif;
+  }
+  .sing-contener__title {
+    font-family: "Poppins", sans-serif;
+    color: white;
+    padding: 0 30px;
+  }
+  .sing-contener__form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0 30px;
+  }
+  .sing-contener__form input {
+    color: white;
+  }
+  .sing-contener__form-text {
+    margin-top: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .sing-contener__form-text-button {
+    background-color: red;
+    width: 100%;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    padding: 5px;
+    font-size: 16px;
+  }
+}/*# sourceMappingURL=sing-up.component.css.map */

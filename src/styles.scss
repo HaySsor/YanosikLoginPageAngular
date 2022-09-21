@@ -1,1 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/theming';
+.mat-checkbox-layout {
+  white-space: normal !important;
+}
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}

@@ -1,17 +1,25 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { LoginComponent } from './login/login.component';
+import { SingUpComponent } from './components/sing-up/sing-up.component';
+import { LoginComponent } from './components/login/login.component';
+
 
 const routes: Routes = [
   {
-    path: 'logowanie',
+    path: '',
+    pathMatch: 'full',
+    component: SingUpComponent,
+  },
+  {
+    path: 'login',
     component: LoginComponent,
   },
   {
-    path: '**',
-    redirectTo: 'logowanie',
+    path: 'sing-up',
+    component: SingUpComponent,
   },
+ 
 ];
 
 @NgModule({

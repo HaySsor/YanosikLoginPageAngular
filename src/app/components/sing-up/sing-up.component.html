@@ -1,0 +1,42 @@
+<div class="sing-contener">
+    <h1 class="sing-contener__title">Rejestracja</h1>
+
+    <form [formGroup]="singUpForm" class="sing-contener__form" (ngSubmit)="submit()">
+        <mat-form-field>
+            <input matInput placeholder="Adres Email" formControlName="email">
+            <mat-error *ngIf="email?.errors?.['required']">Email jest pusty</mat-error>
+            <mat-error *ngIf="email?.errors?.['email']">Email jest błędny</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Hasło" formControlName="password">
+            <mat-error *ngIf="singUpForm.controls['password'].hasError('required')">Puste hasło</mat-error>
+            <mat-error *ngIf="singUpForm.controls['password'].hasError('minlength')">Hasło musi mieć min 6 zanków
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Powtórz hasło" formControlName="confirmPassword">
+            <mat-error *ngIf="singUpForm.controls['confirmPassword'].hasError('required')">Puste hasło</mat-error>
+            <mat-error *ngIf="singUpForm.controls['confirmPassword'].hasError('minlength')">Hasło musi mieć min 6 zanków
+            </mat-error>
+        </mat-form-field>
+        <mat-checkbox class="check" formControlName="all" (change)="check()">
+            Akceptuję wszystkie zgody
+        </mat-checkbox>
+        <mat-error *ngIf="singUpForm.errors?.['passwordsDontMatch']">Hasła muszą być takie same</mat-error>
+        <mat-checkbox [ngClass]="[ singUpForm.get('statute')?.value ? 'check' : 'error']" formControlName="statute"
+            (change)="check()">
+            Zapoznałem/am się z Regulaminem
+        </mat-checkbox>
+        <mat-checkbox [ngClass]="[ singUpForm.get('privacy')?.value ? 'check' : 'error']" formControlName="privacy">
+            Zapoznałem/am się z Polityką Prywatności”
+        </mat-checkbox>
+        <mat-checkbox class="check" formControlName="marketing">
+            Wyrażam zgodę na przetwarzanie moich danych w celach marketingowych
+        </mat-checkbox>
+        <div class="sing-contener__form-text"><button mat-raised-button class="sing-contener__form-text-button"
+                type="submit">Zarejestruj się</button>
+        </div>
+
+    </form>
+
+</div>
